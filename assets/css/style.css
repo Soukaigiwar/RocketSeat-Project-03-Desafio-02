@@ -78,6 +78,13 @@ main .card {
     position: relative;
     border-radius: 20px;
     margin-bottom: 3.2rem;
+    animation: card 700ms ease-in-out;
+    transition: 300ms;
+}
+
+main .card:hover {
+    transform: scale(1.1);
+    transition: 300ms;
 }
 
 main label {
@@ -96,8 +103,32 @@ main label {
     letter-spacing: 0.05em;
 
     color: var(--fc-label);
+
+    animation: label 700ms 400ms ease-in-out backwards;
 }
 
 .card:nth-child(5) {
     margin-bottom: 60px;
+}
+
+@keyframes card {
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes label {
+    0% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
