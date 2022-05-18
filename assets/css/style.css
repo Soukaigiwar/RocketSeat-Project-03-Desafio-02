@@ -1,5 +1,103 @@
+/* 
+font-family: 'Palanquin', sans-serif;
+font-family: 'Staatliches', cursive; 
+*/
+
+:root {
+    font-size: 62.5%;
+
+    --ff-heading: 'Staatliches', cursive;
+    --ff-paragraph: 'Palanquin', sans-serif;
+
+    --fc-primary: hsl(0, 0%, 100%);
+    --fc-secondary: hsl(274, 84%, 12%);
+    --fc-label: hsl(232, 17%, 35%);
+
+    --lc-primary: hsl(312, 91%, 96%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    margin: 0 auto 60px;
+    text-align: center;
+    background: #EFF1FF;
+}
+
+.page header {
+    background: #8E9AAF;
+}
+.page header .title {
+    margin: 30px auto 30px;
+}
+
+.page header div img {
+    margin: 32px auto;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+.page header div h1 {
+    font-family: 'Staatliches';
+    font-size: 4rem;
+    line-height: 4.9rem;
+    letter-spacing: 0.05em;
+
+    color: var(--fc-primary);
+    background: #CBC0D3;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text_sup {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin: 14px auto 63px;
+    width: 305px;
+
+    font-family: 'Palanquin';
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    color: var(--fc-secondary);
+}
+
+main div {
+}
+
+main .card {
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 3.2rem;
+}
+
+main label {
+    position: absolute;
+    top: 16px;
+    right: 45px;
+    display: flexbox;
+    padding: 2px 25px;
+    background: var(--lc-primary);
+    border-radius: 20px;
+    z-index: 100;
+    
+    font-family: 'Staatliches';
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+
+    color: var(--fc-label);
+}
+
+.card:nth-child(5) {
+    margin-bottom: 60px;
 }
